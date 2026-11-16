@@ -1,4 +1,4 @@
-# Databaser & Entity Framework för NEU25G
+# Databaser & Entity Framework för NEU26G
 
 ### Detta repo innehåller utbildningsmaterial för klassen NEU26G på ITHS Göteborg.
 
