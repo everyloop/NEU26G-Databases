@@ -33,11 +33,22 @@ C#		SQL
 <=		<=
 >=		>=
 
+Logiska operatorer:
+C#		SQL
+&&		AND
+||		OR
+!		NOT
+
+SQL						     C#
+NOT country = 'Sweden'		 !(country == "Sweden")
+country <> 'Sweden'			 country != "Sweden"
+
+Standarden (ISO-SQL) anger att queries ska avslutas med semikolon (;), men T-SQL behöver inte det.
+
 */
 
---select * from Users;
-
-select 
+/*
+select top 5
 	-- Projection
 	ID, 
 	UserName, 
@@ -48,7 +59,28 @@ select
 from 
 	Users
 where
-	ID < '60'
 	-- Selection
+	ID < '60'
+*/
+
+--select * from Users where FirstName in ('Ulla', 'Milla', 'My');
+
+--select * from Users where FirstName like 'a%' and LastName like '%n'
+
+--select * from Users order by LastName asc, FirstName desc
+
+--select distinct firstname as 'Name' from Users
+
+select
+	FirstName,
+	len(FirstName) as 'Length',
+	case
+		when len(FirstName) < 5 then 'Short'
+		when len(FirstName) > 8 then 'Long'
+		else 'Medium'
+	end as 'Length of Name'
+from
+	Users
+
 
 
