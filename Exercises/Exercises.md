@@ -3,3 +3,4 @@
 Innan ni börjar med övningsuppgifterna så gör gärna de 5 första lektionerna på [sqlbolt.com](https://sqlbolt.com/)
 
 [CRUD](https://github.com/everyloop/NEU26G-Databases/blob/master/Exercises/CRUD.md)  
+[Aggregering](https://github.com/everyloop/NEU26G-Databases/blob/master/Exercises/Aggregering.md)  
