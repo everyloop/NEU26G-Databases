@@ -32,7 +32,7 @@ where
 
 
 select 
-	Period, 
+	--Period, 
 	count(*) as 'NumberOfElements',
 
 	-- Vi kan inte plocka ut BoilingPoint rakt av eftersom det finns flera värden i varje grupp
@@ -48,7 +48,50 @@ from
 group by 
 	Period;
 
-select * from Elements order by Period
+select * from Elements where Boilingpoint < 100 order by Period
+
+
+select
+	Period,
+	count(*) as 'NumberOfElements'
+from	
+	Elements
+where
+	Boilingpoint < 100
+group by
+	Period
+having
+	count(*) > 1
+
+
+select 
+	ShipRegion,
+	ShipCountry,
+	ShipCity,
+	count(*) as 'NumberOfOrders' 
+from 
+	company.orders
+group by
+	ShipRegion, ShipCountry, ShipCity
+order by
+	NumberOfOrders desc
+
+
+select OrderDate, year(OrderDate), month(OrderDate), day(OrderDate) from company.orders
+
+select
+	year(OrderDate) as 'Year',
+	month(OrderDate) as 'Month',
+	count(*) as 'NumberOfOrders' 
+from 
+	company.orders
+group by
+	year(OrderDate), month(OrderDate)
+having
+	count(*) > 30
+order by
+	year(OrderDate), month(OrderDate)
+
 
 
 
