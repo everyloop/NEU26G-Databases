@@ -24,12 +24,12 @@ Istället delar vi upp informationen så att olika **entiteter**, exempelvis bö
 
 ## Primary Key och Foreign Key
 
-För att koppla ihop informationen använder vi ofta **primärnycklar (Primary Keys)** och **främmande nycklar (Foreign Keys)**.
+För att koppla ihop informationen använder vi ofta **primärnycklar (Primary Keys)** och **relations-nycklar (Foreign Keys)**.
 
 - **Primary Key (PK)** identifierar varje rad i en tabell unikt.
 - **Foreign Key (FK)** refererar till en nyckel i en annan tabell (eller samma tabell).
 
-En främmande nyckel behöver inte vara unik. Flera böcker kan exempelvis referera till samma författare.
+En Foreign Key behöver inte vara unik. Flera böcker kan exempelvis referera till samma författare.
 
 Det viktiga är att förstå att dessa nycklar inte bara hjälper oss att identifiera kopplingar. De fungerar också som **constraints**, alltså regler som databashanteraren upprätthåller.
 
