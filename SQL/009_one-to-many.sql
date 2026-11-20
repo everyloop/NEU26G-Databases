@@ -43,6 +43,8 @@ from
 	right join Cities ci on co.id = ci.countryId
 
 
+
+
 -- Exempel på join och group by/aggeregering
 select 
 	co.name,
@@ -52,3 +54,13 @@ from
 	left join Cities ci on co.id = ci.countryId
 group by
 	co.name
+
+
+-- Äldre syntax (join-keyword infördes på 90-talet) - ANVÄND INTE
+select
+	*
+from
+	Countries co, Cities ci
+where
+	co.id = ci.id
+
