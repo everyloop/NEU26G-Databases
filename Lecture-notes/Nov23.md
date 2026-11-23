@@ -4,7 +4,7 @@
 **Lecture slide:**  
 [ACID-Transaktioner.pdf](https://github.com/everyloop/NEU26G-Databases/blob/master/Resources/ACID-Transaktioner.pdf)  
 
-**Code-alongs:** 
+**Code-alongs:**  
 [L001_SqlClient](https://github.com/everyloop/NEU26G-Databases/blob/main/Code-alongs/L001_SqlClient/Program.cs)  
 [L002_SQL_Injection_Demo](https://github.com/everyloop/NEU26G-Databases/blob/main/Code-alongs/L002_SQL_Injection_Demo/Program.cs)  
 
