@@ -45,22 +45,38 @@ static void SearchAirports(SqlConnection connection, string searchString)
 
     using (var command = new SqlCommand(query, connection))
     {
-        using (var reader = command.ExecuteReader())
+        try
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine();
-            Console.Write($"{reader.GetName(0).ToUpper(),-10}");
-            Console.Write($"{reader.GetName(1).ToUpper(),-50}");
-            Console.Write($"{reader.GetName(2).ToUpper()}");
-            Console.WriteLine("\n");
-
-            while (reader.Read())
+            using (var reader = command.ExecuteReader())
             {
-                Console.WriteLine($"{reader.GetValue(0),-10}{reader.GetValue(1),-50}{reader.GetValue(2)}");
-            }
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+                Console.Write($"{reader.GetName(0).ToUpper(),-10}");
+                Console.Write($"{reader.GetName(1).ToUpper(),-50}");
+                Console.Write($"{reader.GetName(2).ToUpper()}");
+                Console.WriteLine("\n");
 
+                while (reader.Read())
+                {
+                    Console.WriteLine($"{reader.GetValue(0),-10}{reader.GetValue(1),-50}{reader.GetValue(2)}");
+                }
+
+                Console.ResetColor();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(ex.Message);
             Console.ResetColor();
         }
     }
+
+    Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.WriteLine(query);
+    Console.ResetColor();
+    Console.WriteLine();
 }
 
