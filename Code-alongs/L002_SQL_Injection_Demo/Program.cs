@@ -31,5 +31,36 @@ using (var connection = new SqlConnection(connectionString))
 
 static void SearchAirports(SqlConnection connection, string searchString)
 {
+    // Raw literal value
+    string query = $"""
+                    select top 10
+                    	[IATA],
+                    	[Airport name],
+                    	[Location served]
+                    from 
+                    	Airports
+                    where
+                    	[Location served] like '%{searchString}%';
+                    """;
 
+    using (var command = new SqlCommand(query, connection))
+    {
+        using (var reader = command.ExecuteReader())
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine();
+            Console.Write($"{reader.GetName(0).ToUpper(),-10}");
+            Console.Write($"{reader.GetName(1).ToUpper(),-50}");
+            Console.Write($"{reader.GetName(2).ToUpper()}");
+            Console.WriteLine("\n");
+
+            while (reader.Read())
+            {
+                Console.WriteLine($"{reader.GetValue(0),-10}{reader.GetValue(1),-50}{reader.GetValue(2)}");
+            }
+
+            Console.ResetColor();
+        }
+    }
 }
+
