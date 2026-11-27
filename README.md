@@ -13,9 +13,11 @@ Här hittar du code-along projekt från lektioner, lektionsanteckningar, samt [�
 | [Nov 20][Nov20] | Joins.                                                         |
 | [Nov 23][Nov23] | SqlClient. SQL-injection. Transaktioner. ACID.                 |
 | [Nov 25][Nov25] | Data-integritet, constraints, normalisering, ER-diagram.       |
+| [Nov 27][Nov27] | Set-based programming. Subqueries. Views. Stored procedures.   |
 
 [Nov16]: https://github.com/everyloop/NEU26G-Databases/blob/master/Lecture-notes/Nov16.md  
 [Nov18]: https://github.com/everyloop/NEU26G-Databases/blob/master/Lecture-notes/Nov18.md  
 [Nov20]: https://github.com/everyloop/NEU26G-Databases/blob/master/Lecture-notes/Nov20.md  
 [Nov23]: https://github.com/everyloop/NEU26G-Databases/blob/master/Lecture-notes/Nov23.md  
 [Nov25]: https://github.com/everyloop/NEU26G-Databases/blob/master/Lecture-notes/Nov25.md  
+[Nov27]: https://github.com/everyloop/NEU26G-Databases/blob/master/Lecture-notes/Nov27.md  
